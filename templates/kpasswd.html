@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:py="http://genshi.edgewall.org/">
+  <head>
+    <title>${genparams.title}</title>
+	<link href="/css/layout.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body class="submit">
+    <center>
+	<div id="header">
+      <h1>${genparams.title}</h1>
+    </div>
+	<ol py:if="genparams.message">
+		<ul class="${genparams.message.type}">${genparams.message.text}</ul>
+	</ol>
+
+    <form action="/kpasswdf" method="post">
+	  <table summary=""><tbody>
+      <tr>
+        <th align="right"><label for="url">Principal</label></th>
+        <td><input type="text" id="principal" name="principal" size="30" /></td>
+      </tr><tr>
+        <th align="right">&nbsp;</th>
+        <td class="hint">Example: myprinc, myprinc@MYREALM.COM</td>
+      </tr><tr>
+        <th align="right">&nbsp;</th>
+        <td class="hint">(default realm: ${genparams.realm})</td>
+      </tr><tr>
+        <th align="right"><label for="title">Password</label></th>
+        <td><input type="password" id="password" name="password" size="30" /></td>
+      </tr><tr>
+      </tr><tr>
+        <th align="right"><label for="title">New password</label></th>
+        <td><input type="password" id="newpass" name="newpass" size="30" /></td>
+      </tr><tr>
+      </tr><tr>
+        <th align="right"><label for="title">Verify new password</label></th>
+        <td><input type="password" id="newpassv" name="newpassv" size="30" /></td>
+      </tr><tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="submit" value="Submit" />
+        </td>
+      </tr></tbody></table>
+    </form>
+	</center>
+
+    <div id="footer">
+      <hr />
+      <p class="legalese">© 2010, Jan Krcmar, CDTEL</p>
+    </div>
+  </body>
+</html>

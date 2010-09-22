@@ -1,0 +1,16 @@
+/*
+ CSS Layout for kpasswd web
+*/
+
+ul.greenmessage {
+	color: green;
+}
+
+ul.redmessage {
+	color: red;
+}
+
+td.hint {
+	font-size: small;
+}
+
