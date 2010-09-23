@@ -9,7 +9,7 @@ class Kadm5:
 	"""
 	
 	def __init__(self):
-		self.codes = self.getDefined("/usr/include/kadm5/kadm_err.h")
+		self.codes = self.getDefined("common/kadm_err.h")
 		self.kadm = cdll.LoadLibrary('libkadm5clnt.so')
 	
 	def getDefined(self, filename):

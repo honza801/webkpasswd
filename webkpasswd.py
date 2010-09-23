@@ -110,7 +110,7 @@ class WebKpasswd:
 				trealm, "kadmin/cdtel00pceux509.uxkdc.cdtel.cz")
 			
 			# check the result
-			if ret > 0:
+			if ret:
 				self.raise_message(principal, "notchanged", trealm)
 			else:
 				self.raise_message(principal, "success", trealm)
